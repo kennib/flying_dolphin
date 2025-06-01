@@ -5,14 +5,27 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Milonga';
+  src: url('fonts/Milonga-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('fonts/Raleway.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   width: 100%;
   margin: 0px;
 
-  font-family: "Arizonia", cursive;
+  font-family: "Raleway", sans-serif;
 
-
-  color: #f9d48f;
+  color: #eee;
   background: black;
 }
 
@@ -29,6 +42,8 @@ nav ul {
 
 nav ul li {
   flex: 1;
+
+  font-family: "Arizonia", cursive;
 }
 
 nav ul li a {
@@ -38,6 +53,29 @@ nav ul li a {
 }
 
 
+h1, h2 {
+  font-family: "Arizonia", cursive;
+  font-weight: bold;
+
+  text-shadow: 1px 1px 2px rgba(163, 111, 51, 0.3);
+  background: repeating-linear-gradient(
+      90deg,
+      #a36f33 0%,
+      #d6993c 10%,
+      #f9d48f 20%,
+      #fff4cc 30%,
+      #d6993c 40%,
+      #a36f33 50%
+    ); 
+  background-size: 300% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.1s ease-out;
+  will-change: background-position;
+}
+
 h1 {
   text-align: center;
   font-size: 50px;
@@ -45,6 +83,22 @@ h1 {
 
 h2 {
   font-size: 32px;
+}
+
+h3 {
+  font-family: "Milonga", sans-serif;
+}
+
+h3:nth-of-type(3n + 1) {
+  color: #336d57;
+}
+
+h3:nth-of-type(3n + 2) {
+  color: #9a3172;
+}
+
+h3:nth-of-type(3n + 3) {
+  color: #123579;
 }
 
 section {
