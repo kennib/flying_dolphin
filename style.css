@@ -36,8 +36,12 @@ nav {
 }
 
 nav ul {
-  list-style: none;
   display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  gap: 20px;
+
+  list-style: none;
 }
 
 nav ul li {
@@ -108,10 +112,63 @@ section {
   margin: auto;
 }
 
-section#performance {
-  background: url('images/yellow.jpg') no-repeat top center black;
+section#main {
+  display: flex;
+  flex-direction: column;
+
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url('images/yellow.jpg') no-repeat top center black;
 }
+
+section#main h1 {
+  flex-grow: 0;
+}
+section#main nav {
+  flex-grow: 0;
+}
+section#main .description {
+  flex-grow: 1;
+  align-content: end;
+}
+
+.description p {
+  float: bottom;
+
+  width: 600px;
+  padding: 10px;
+  margin: auto;
+
+  background: rgba(0,0,0, 0.8);
+}
+
 
 section#photos {
   background: url('images/teaching.jpg') no-repeat top center color(srgb 0.0083 0.0455 0.0534);
+}
+
+form input,
+form textarea {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+}
+
+fieldset {
+  border: none;
+}
+
+button,
+input[type=submit] {
+  width: auto;
+  padding: 6px;
+
+  cursor: pointer;
+
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+
+  background: #3685aa;
+  color: #eee;
+
+  border: 1px solid #5899cc; 
 }

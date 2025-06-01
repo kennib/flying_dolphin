@@ -9,15 +9,26 @@
   </head>
 
   <body>
-    <h1>Flying Dolphin Aerials</h1>
-    <nav>
-      <ul>
-        <li><a href="#performance">Performace</a></li>
-        <li><a href="#photos">Photoshoots</a></li>
-        <li><a href="#workshops">Workshops</a></li>
-        <li><a href="#coaching">Coaching</a></li>
-      </ul>
-    </nav>
+    <section id="main">
+      <h1>Flying Dolphin Aerials</h1>
+      <nav>
+        <ul>
+          <li><a href="#performance">Performace</a></li>
+          <li><a href="#photos">Photoshoots</a></li>
+          <li><a href="#workshops">Workshops</a></li>
+          <li><a href="#coaching">Coaching</a></li>
+        </ul>
+      </nav>
+
+      <div class="description">
+        <p>
+          Flying Dolphin is a an aerial artist, performer and teacher.
+        </p>
+        <p>
+          Enjoy videos of her art, join one of her workshops or book a private coaching session.
+        </p>
+      </div>
+    </section>
 
     <section id="performance">
       <h2>Performance</h2>
@@ -43,17 +54,34 @@
         Request a private coaching workshop with Flying Dolphin.
       </p>
 
-      <form>
-        <p>
-          <label>Email: <input /></label>
-        </p>
-        <p>
-          <label>Message: <textarea></textarea></label>
-        </p>
-        <p>
+      <form id="emailForm">
+        <fieldset>
+          <legend for="name">Your name</legend>
+          <input type="text" name="name" required>
+        </fieldset>
+        <fieldset>
+          <legend for="message">Your message</legend>
+          <textarea name="message" rows=8>I would like to book a private workshop.</textarea>
+        </fieldset>
+        <fieldset>
           <input type="submit"></input>
-        </p>
+        </fieldset>
       </form>
+
+      <script>
+        document.getElementById('emailForm').addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          const email = 'alicia@gmail.com';
+          const form = e.target;
+          const name = encodeURIComponent(form.name.value);
+          const message = encodeURIComponent(form.message.value);
+
+          const mailtoLink = `mailto:${email}?subject=Message from ${name}&body=From: ${name}%0A%0A${message}`;
+
+          window.location.href = mailtoLink;
+        });
+      </script>
     </section>
   </body>
 </html>
