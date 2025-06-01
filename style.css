@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'Arizonia';
+  src: url('fonts/Arizonia-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  width: 100%;
+  margin: 0px;
+
+  font-family: "Arizonia", cursive;
+
+
+  color: #f9d48f;
+  background: black;
+}
+
+nav {
+  margin: auto;
+  width: 100%;
+  max-width: 800px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  flex: 1;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 30px;
+  color: #f9d48f;
+}
+
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+section {
+  padding: 20px;
+  min-height: 80vh;
+  max-width: 800px;
+  margin: auto;
+}
+
+section#performance {
+  background: url('images/yellow.jpg') no-repeat top center black;
+}
+
+section#photos {
+  background: url('images/teaching.jpg') no-repeat top center color(srgb 0.0083 0.0455 0.0534);
+}
