@@ -133,7 +133,7 @@ section#main .description {
 .description p {
   float: bottom;
 
-  width: 600px;
+  max-width: 600px;
   padding: 10px;
   margin: auto;
 
