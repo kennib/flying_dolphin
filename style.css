@@ -140,11 +140,6 @@ section#main .description {
   background: rgba(0,0,0, 0.8);
 }
 
-
-section#photos {
-  background: url('images/teaching.jpg') no-repeat top center color(srgb 0.0083 0.0455 0.0534);
-}
-
 form input,
 form textarea {
   display: block;
@@ -159,7 +154,7 @@ fieldset {
 button,
 input[type=submit] {
   width: auto;
-  padding: 6px;
+  padding: 6px 20px;
 
   cursor: pointer;
 
@@ -171,4 +166,36 @@ input[type=submit] {
   color: #eee;
 
   border: 1px solid #5899cc; 
+}
+
+.photo_gallery {
+  height: 120vh;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 20px;
+}
+
+.photo_gallery img {
+  width: 200px;
+  height: auto;
+  flex-shrink: 0;
+  flex-grow: 0;
+
+  background: repeating-linear-gradient(
+      90deg,
+      #a36f33 0%,
+      #d6993c 10%,
+      #f9d48f 20%,
+      #fff4cc 30%,
+      #d6993c 40%,
+      #a36f33 50%
+    ); 
+  background-size: 300% auto;
+  background-clip: border;
+  border: 5px solid transparent;
+  transition: background-position 0.1s ease-out;
+ 
 }
